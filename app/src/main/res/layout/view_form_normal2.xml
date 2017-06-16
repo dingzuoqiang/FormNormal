@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="15dp"
+    android:paddingLeft="@dimen/row_inner_left_padding"
+    android:paddingRight="@dimen/row_inner_right_padding"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/imv_label"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="@dimen/padding_10" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/FormRowInputTitleTextStyle"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_title2"
+            style="@style/FormRowValueTextStyle"
+            android:layout_marginTop="@dimen/padding_10"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/color_b2b2b2"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_value"
+        style="@style/FormRowValueTextStyle"
+        android:layout_marginLeft="13dp"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/row_inner_right_image_left_margin"
+        android:src="@drawable/icon_forward" />
+
+</LinearLayout>

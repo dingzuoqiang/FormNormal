@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FormNormal">
+        <attr name="fnHint" format="string" />
+        <attr name="fnText" format="string" />
+        <attr name="fnTitle" format="string" />
+        <attr name="fnIndicatorVisible" format="boolean" />
+        <attr name="fnEditable" format="boolean" />
+        <attr name="fnGravityLeft" format="boolean" />
+        <attr name="fnResId" format="reference" />
+
+        <attr name="fnTitleTextSize" format="integer" />
+        <attr name="fnTitleTextColor" format="reference" />
+        <attr name="fnTextSize" format="integer" />
+        <attr name="fnTextColor" format="reference" />
+
+        <attr name="fnLeftPadding" format="dimension" />//
+        <attr name="fnTopPadding" format="dimension" />//
+        <attr name="fnRightPadding" format="dimension" />//
+        <attr name="fnBottomPadding" format="dimension" />//
+
+    </declare-styleable>
+
+
+    <declare-styleable name="FormNormal2">
+        <attr name="fn2Hint" format="string" />
+        <attr name="fn2Text" format="string" />
+        <attr name="fn2Title" format="string" />
+        <attr name="fn2Title2" format="string" />
+        <attr name="fn2IndicatorVisible" format="boolean" />
+        <attr name="fn2ResId" format="reference" />
+    </declare-styleable>
+
+</resources>

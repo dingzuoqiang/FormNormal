@@ -1,0 +1,142 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/black</item>-->
+        <!--<item name="colorPrimaryDark">@color/color_actionbar_bg</item>-->
+        <!--<item name="colorAccent">@color/black</item>-->
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+    </style>
+
+    <style name="Theme.Translucent_NoTitle_FullScreen" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!--actionbar 最右侧文字按钮 style-->
+    <style name="ActionBarRightButtonTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_bar_height</item>
+        <item name="android:background">@drawable/back_select_image</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+
+    <!--基础字体样式-->
+    <style name="NormalTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+    <style name="AboutTabTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <!--formRow 外围 base style-->
+    <style name="FormRowBaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/form_row_height</item>
+        <item name="android:background">@drawable/row_pressed2</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/row_inner_left_padding</item>
+        <item name="android:paddingRight">@dimen/row_inner_left_padding</item>
+        <item name="android:paddingTop">@dimen/row_inner_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/row_inner_vertical_padding</item>
+    </style>
+
+    <style name="FormRowInputTitleTextStyle" parent="NormalTextStyle">
+        <item name="android:minWidth">@dimen/form_row_title_width_min</item>
+    </style>
+
+    <style name="FormRowValueTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <!--FormNormal base style-->
+    <style name="FormNormalBaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/row_pressed2</item>
+        <item name="android:clickable">true</item>
+        <item name="fnTopPadding">@dimen/row_inner_vertical_padding5</item>
+        <item name="fnBottomPadding">@dimen/row_inner_vertical_padding5</item>
+    </style>
+
+    <style name="PageHintTextStyle">
+        <item name="android:layout_marginLeft">@dimen/padding_15</item>
+        <item name="android:layout_marginTop">@dimen/padding_12</item>
+        <item name="android:layout_marginBottom">@dimen/padding_12</item>
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="CustomStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="fnTextSize">14</item>
+        <item name="fnTextColor">@color/color_333333</item>
+        <item name="fnTitleTextSize">14</item>
+        <item name="fnTitleTextColor">@color/color_666666</item>
+        <item name="fnIndicatorVisible">false</item>
+        <item name="fnTopPadding">@dimen/row_inner_vertical_padding2</item>
+        <item name="fnBottomPadding">@dimen/row_inner_vertical_padding2</item>
+
+    </style>
+
+    <style name="FormNormalBaseStyle_Text" parent="FormNormalBaseStyle">
+        <item name="fnTextSize">17</item>
+        <item name="fnTextColor">@color/color_333333</item>
+        <item name="fnGravityLeft">true</item>
+
+    </style>
+
+    <style name="About_TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

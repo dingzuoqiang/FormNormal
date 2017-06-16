@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">表单封装</string>
+    <string name="max_input_prompt">最多只能输入%s个字</string>
+</resources>

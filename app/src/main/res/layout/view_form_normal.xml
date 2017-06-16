@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imv_label"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/padding_15" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/FormRowInputTitleTextStyle"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.dzq.formnormal.widget.EmojiEditText
+            android:id="@+id/et_value"
+            style="@style/FormRowInputTitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:background="@color/transparent"
+            android:gravity="right"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/FormRowValueTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:background="@color/transparent"
+            android:gravity="right"
+            android:text="" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/row_inner_right_image_left_margin"
+        android:src="@drawable/icon_forward" />
+
+</LinearLayout>
