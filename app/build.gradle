@@ -1,21 +1,15 @@
 apply plugin: 'com.android.application'
 
-def releaseTime() {
-    return new Date().format("yyyyMMdd", TimeZone.getDefault())
-}
-
 android {
     compileSdkVersion 24
     buildToolsVersion "25.0.1"
-
-
 
     defaultConfig {
         applicationId "com.dzq.formnormal"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -27,27 +21,6 @@ android {
         }
     }
 
-    productFlavors {
-        owner {}
-//        sougou {}
-//        tengxun {}
-//        "360" {}
-//        shouzhu {}
-//        "91" {}
-//        anzhuoshichang {}
-    }
-    productFlavors.all { flavor ->
-        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-    }
-}
-
-allprojects {
-    repositories {
-        maven { url "https://jitpack.io" }
-        flatDir {
-            dirs 'libs'
-        }
-    }
 }
 
 dependencies {
@@ -59,12 +32,5 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     testCompile 'junit:junit:4.12'
 
-    compile 'com.jakewharton:butterknife:7.0.1'
-
-    compile 'io.reactivex:rxjava:1.1.6'
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
 }
