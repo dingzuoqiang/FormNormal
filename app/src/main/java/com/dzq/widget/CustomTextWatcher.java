@@ -18,7 +18,7 @@
  * @Mail: zmars@me.com
  */
 
-package com.dzq.formnormal.widget;
+package com.dzq.widget;
 
 import android.content.Context;
 import android.text.Editable;

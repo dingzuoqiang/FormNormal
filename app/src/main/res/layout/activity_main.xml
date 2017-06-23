@@ -29,31 +29,31 @@
                 android:text="1. FormNormal 基本用法"
                 android:textColor="@color/color_666666" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnTitle="title" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnHint="hint"
                 app:fnTitle="title" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnText="text"
                 app:fnTitle="title" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnHint="hint"
                 app:fnIndicatorVisible="false"
                 app:fnTitle="title" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 android:background="@color/white"
@@ -62,7 +62,7 @@
                 app:fnIndicatorVisible="false"
                 app:fnTitle="title" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 android:background="@color/white"
@@ -73,7 +73,7 @@
                 app:fnTitle="title" />
 
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnHint="hint"
@@ -84,7 +84,7 @@
                 app:fnTitleTextColor="@color/color_3fbeaf"
                 app:fnTitleTextSize="25" />
 
-            <com.dzq.formnormal.widget.FormNormal
+            <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fnResId="@drawable/icon_myjk"
@@ -100,7 +100,7 @@
                 android:textColor="@color/color_333333"
                 android:textSize="@dimen/text_size_20" />
 
-            <com.dzq.formnormal.widget.FormNormal2
+            <com.dzq.widget.FormNormal2
                 android:id="@+id/lay_loan_information"
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"

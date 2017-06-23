@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1">
 
-        <com.dzq.formnormal.widget.EmojiEditText
+        <com.dzq.widget.EmojiEditText
             android:id="@+id/et_value"
             style="@style/FormRowInputTitleTextStyle"
             android:layout_width="match_parent"
