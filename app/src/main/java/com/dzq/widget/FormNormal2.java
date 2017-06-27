@@ -33,6 +33,11 @@ public class FormNormal2 extends LinearLayout {
 
     private void initUI(Context context, AttributeSet attrs) {
         LayoutInflater.from(context).inflate(R.layout.view_form_normal2, this, true);
+        int left = getResources().getDimensionPixelSize(R.dimen.row_inner_left_padding);
+        int top = left;
+        int right = left;
+        int bottom = left;
+
         tvTitle = (TextView) findViewById(R.id.tv_title);
         tvTitle2 = (TextView) findViewById(R.id.tv_title2);
         imvIndicator = (ImageView) findViewById(R.id.imv_indicator);
@@ -46,6 +51,11 @@ public class FormNormal2 extends LinearLayout {
         CharSequence text = a.getText(R.styleable.FormNormal2_fn2Text);
         boolean indicatorVisible = a.getBoolean(R.styleable.FormNormal2_fn2IndicatorVisible, true);
         int resId = a.getResourceId(R.styleable.FormNormal2_fn2ResId, -1);
+
+        left = a.getDimensionPixelSize(R.styleable.FormNormal2_fn2LeftPadding, left);
+        top = a.getDimensionPixelSize(R.styleable.FormNormal2_fn2TopPadding, top);
+        right = a.getDimensionPixelSize(R.styleable.FormNormal2_fn2RightPadding, right);
+        bottom = a.getDimensionPixelSize(R.styleable.FormNormal2_fn2BottomPadding, bottom);
         a.recycle();
 
         if (!TextUtils.isEmpty(hint)) {
@@ -64,12 +74,14 @@ public class FormNormal2 extends LinearLayout {
             setText(text.toString());
         }
 
-        if (resId != -1) {
-            setImvLabelImageResource(resId);
-        }
+        setImvLabelImageResource(resId);
 
         setImvIndicatorVisible(indicatorVisible);
+        setPadding2(left, top, right, bottom);
+    }
 
+    public void setPadding2(int left, int top, int right, int bottom) {
+        this.setPadding(left, top, right, bottom);
     }
 
     public void init(String title, String text) {
@@ -122,7 +134,12 @@ public class FormNormal2 extends LinearLayout {
     }
 
     public void setImvLabelImageResource(int resId) {
-        imvLabel.setImageResource(resId);
+        if (resId != -1) {
+            imvLabel.setImageResource(resId);
+            imvLabel.setVisibility(VISIBLE);
+        } else {
+            imvLabel.setVisibility(GONE);
+        }
     }
 
     public String getText() {

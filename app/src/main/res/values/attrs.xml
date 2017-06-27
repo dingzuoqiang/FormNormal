@@ -30,6 +30,11 @@
         <attr name="fn2Title2" format="string" />
         <attr name="fn2IndicatorVisible" format="boolean" />
         <attr name="fn2ResId" format="reference" />
+
+        <attr name="fn2LeftPadding" format="dimension" />//
+        <attr name="fn2TopPadding" format="dimension" />//
+        <attr name="fn2RightPadding" format="dimension" />//
+        <attr name="fn2BottomPadding" format="dimension" />//
     </declare-styleable>
 
 </resources>

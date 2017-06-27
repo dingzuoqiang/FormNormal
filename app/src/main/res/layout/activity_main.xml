@@ -91,6 +91,17 @@
                 app:fnText="text"
                 app:fnTitle="title" />
 
+            <com.dzq.widget.FormNormal
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fnResId="@drawable/icon_myjk"
+                app:fnBottomPadding="30dp"
+                app:fnLeftPadding="30dp"
+                app:fnTopPadding="30dp"
+                app:fnRightPadding="30dp"
+                app:fnText="text"
+                app:fnTitle="title" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,13 +112,51 @@
                 android:textSize="@dimen/text_size_20" />
 
             <com.dzq.widget.FormNormal2
-                android:id="@+id/lay_loan_information"
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fn2IndicatorVisible="false"
+                app:fn2Title="title"
+                app:fn2Title2="title2" />
+
+            <com.dzq.widget.FormNormal2
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fn2Title="title"
+                app:fn2Title2="title2" />
+
+            <com.dzq.widget.FormNormal2
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fn2Hint="hint"
+                app:fn2Title="title"
+                app:fn2Title2="title2" />
+
+            <com.dzq.widget.FormNormal2
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fn2Text="text"
+                app:fn2Title="title"
+                app:fn2Title2="title2" />
+
+            <com.dzq.widget.FormNormal2
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
                 app:fn2Hint="hint"
                 app:fn2ResId="@drawable/icon_id"
                 app:fn2Title="title"
                 app:fn2Title2="title2" />
+
+            <com.dzq.widget.FormNormal2
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                app:fn2BottomPadding="30dp"
+                app:fn2Hint="hint"
+                app:fn2LeftPadding="30dp"
+                app:fn2ResId="@drawable/icon_id"
+                app:fn2Text="text"
+                app:fn2Title="title"
+                app:fn2Title2="title2"
+                app:fn2TopPadding="30dp" />
         </LinearLayout>
     </ScrollView>
 

@@ -2,11 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingBottom="15dp"
-    android:paddingLeft="@dimen/row_inner_left_padding"
-    android:paddingRight="@dimen/row_inner_right_padding"
-    android:paddingTop="15dp">
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/imv_label"
