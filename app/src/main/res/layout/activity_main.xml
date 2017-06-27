@@ -81,7 +81,7 @@
                 app:fnTextColor="@color/color_4c97ff"
                 app:fnTextSize="22"
                 app:fnTitle="title"
-                app:fnTitleTextColor="@color/color_3fbeaf"
+                app:fnTitleTextColor="@color/color_4c97ff"
                 app:fnTitleTextSize="25" />
 
             <com.dzq.widget.FormNormal

@@ -4,11 +4,6 @@
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#FF4081</color>-->
 
-    // basic color
-    <color name="app_bg">#f3f3f6</color>
-    <color name="text_hint_color">#cccccc</color>
-    <color name="xc_group_divider">#e5e5e5</color>
-
     <color name="alpha_light_gray">#eeeeee</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
@@ -17,9 +12,7 @@
     <color name="color_999999">#999999</color>
     <!--60%透明-->
     <color name="color_white_60_persent">#99FFFFFF</color>
-    <color name="color_3fbeaf">#3fbeaf</color>
     <color name="color_b2b2b2">#b2b2b2</color>
-    <color name="color_3388ff">#3388ff</color>
     <color name="color_4c97ff">#4c97ff</color>
 
 </resources>
