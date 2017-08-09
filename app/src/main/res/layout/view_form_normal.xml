@@ -18,11 +18,12 @@
         android:text="" />
 
     <FrameLayout
+        android:id="@+id/lay_content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1">
 
-        <com.dzq.widget.EmojiEditText
+        <EditText
             android:id="@+id/et_value"
             style="@style/FormRowInputTitleTextStyle"
             android:layout_width="match_parent"

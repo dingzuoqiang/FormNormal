@@ -3,6 +3,7 @@ package com.dzq.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -10,6 +11,9 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,10 +28,11 @@ import com.dzq.formnormal.R;
 public class FormNormal extends LinearLayout {
 
     private TextView tvTitle;
-    private TextView etValue;
+    private EditText etValue;
     private ImageView imvIndicator;
     private TextView tvValue;
     private ImageView imvLabel;
+    private FrameLayout layContent;
     private boolean editable;
     //    0 任意字符串(默认) 、1 手机号 、2 密码
     private FormNormalTypeEnum mTypeEnum = FormNormalTypeEnum.TYPE_NORMAL;
@@ -44,10 +49,11 @@ public class FormNormal extends LinearLayout {
         int right = getResources().getDimensionPixelSize(R.dimen.row_inner_right_padding);
         int bottom = getResources().getDimensionPixelSize(R.dimen.row_inner_vertical_padding);
         tvTitle = (TextView) findViewById(R.id.tv_title);
-        etValue = (TextView) findViewById(R.id.et_value);
+        etValue = (EditText) findViewById(R.id.et_value);
         imvIndicator = (ImageView) findViewById(R.id.imv_indicator);
         tvValue = (TextView) findViewById(R.id.tv_value);
         imvLabel = (ImageView) findViewById(R.id.imv_label);
+        layContent = (FrameLayout) findViewById(R.id.lay_content);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FormNormal);
 
         if (a != null) {
@@ -107,6 +113,12 @@ public class FormNormal extends LinearLayout {
 
     public void setTitle(String title) {
         tvTitle.setText(title);
+    }
+
+    // 设置 title minwidth
+    public void setTitleMinWidth(int minWidth) {
+        tvTitle.setMinWidth(minWidth);
+        tvTitle.setMinimumWidth(minWidth);//必须同时设置这个
     }
 
     // 内容是否左对齐，   false 右对齐
@@ -182,6 +194,11 @@ public class FormNormal extends LinearLayout {
         }
     }
 
+    public void setImvIndicatorImageResource(int resId) {
+        if (resId != -1) {
+            this.imvIndicator.setImageResource(resId);
+        }
+    }
 
     public String getText() {
         return getTextView().getText().toString();
@@ -191,8 +208,24 @@ public class FormNormal extends LinearLayout {
         return editable ? etValue : tvValue;
     }
 
+    public EditText getEtValue() {
+        return etValue;
+    }
+
     public TextView getTvTitle() {
         return tvTitle;
+    }
+
+    public ImageView getImvIndicator() {
+        return imvIndicator;
+    }
+
+    public FrameLayout getLayContent() {
+        return layContent;
+    }
+
+    public ImageView getImvLabel() {
+        return imvLabel;
     }
 
     public void setHint(String text) {
@@ -202,6 +235,33 @@ public class FormNormal extends LinearLayout {
 
     public void setPadding2(int left, int top, int right, int bottom) {
         this.setPadding(left, top, right, bottom);
+    }
+
+    public void setClearable() {
+        imvIndicator.setVisibility(INVISIBLE);
+        setImvIndicatorImageResource(R.drawable.icon_clear);
+        getTextView().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                imvIndicator.setVisibility(s.length() > 0 ? VISIBLE : INVISIBLE);
+            }
+        });
+        imvIndicator.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTextView().setText("");
+            }
+        });
     }
 
     public void setMaxLength(int maxLength) {
@@ -223,20 +283,26 @@ public class FormNormal extends LinearLayout {
                 etValue.setInputType(InputType.TYPE_CLASS_TEXT);
 
                 break;
-            case TYPE_PHONE_NUMBER: //
+            case TYPE_CLASS_NUMBER: //
                 etValue.setInputType(InputType.TYPE_CLASS_NUMBER);
+                break;
+            case TYPE_CLASS_PHONE: //
+                etValue.setInputType(InputType.TYPE_CLASS_PHONE);
                 break;
             case TYPE_PASSWORD: //
                 etValue.setInputType(InputType.TYPE_CLASS_TEXT | InputType
                         .TYPE_TEXT_VARIATION_PASSWORD);
-
                 break;
-            case TYPE_NUMBER_OR_LETTERS: //
-                etValue.addTextChangedListener(new CustomTextWatcher(2));
+            case TYPE_VISIBLE_PASSWORD: //
+                etValue.setInputType(InputType.TYPE_CLASS_TEXT | InputType
+                        .TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 break;
 
             case TYPE_NUMBER_OR_DECIMAL: //
                 etValue.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                break;
+            case TYPE_TEXT_VARIATION_EMAIL_ADDRESS: //
+                etValue.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
                 break;
             default:
                 break;
@@ -245,12 +311,14 @@ public class FormNormal extends LinearLayout {
     }
 
     public enum FormNormalTypeEnum {
-        //        0 任意字符串(默认) 、1 手机号 、2 密码 3 数字或者字母  4 只能输入数字和小数点
+        //        0 任意字符串(默认) 、1 手机号 、2 密码   4 只能输入数字和小数点 5 可见密码 6 数字
         TYPE_NORMAL(0),
-        TYPE_PHONE_NUMBER(1),
+        TYPE_CLASS_PHONE(1),
         TYPE_PASSWORD(2),
-        TYPE_NUMBER_OR_LETTERS(3),
-        TYPE_NUMBER_OR_DECIMAL(4);
+        TYPE_NUMBER_OR_DECIMAL(4),
+        TYPE_VISIBLE_PASSWORD(5),
+        TYPE_CLASS_NUMBER(6),
+        TYPE_TEXT_VARIATION_EMAIL_ADDRESS(7);
 
         private int mCode;
 
