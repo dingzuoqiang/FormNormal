@@ -10,3 +10,6 @@ build.gradle 里 配置：
 
 代码上传到github时，使用下面代码
 apply plugin: 'com.android.library'
+
+![image](https://github.com/dingzuoqiang/FormNormal/blob/master/app/Screenshot_2017-08-09-11-19-44-340_com.dzq.formno.png)
+![image](https://github.com/dingzuoqiang/FormNormal/blob/master/app/Screenshot_2017-08-09-11-20-22-146_com.dzq.formno.png)

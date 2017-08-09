@@ -9,6 +9,7 @@
         <attr name="fnEditable" format="boolean" />
         <attr name="fnGravityLeft" format="boolean" />
         <attr name="fnResId" format="reference" />
+        <attr name="fnSetClearable" format="boolean" />
 
         <attr name="fnTitleTextSize" format="integer" />
         <attr name="fnTitleTextColor" format="reference" />

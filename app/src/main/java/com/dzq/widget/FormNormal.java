@@ -65,6 +65,8 @@ public class FormNormal extends LinearLayout {
             boolean fnGravityLeft = a.getBoolean(R.styleable.FormNormal_fnGravityLeft, false);// 内容靠左对其
             int resid = a.getResourceId(R.styleable.FormNormal_fnResId, -1);
 
+            boolean fnSetClearable = a.getBoolean(R.styleable.FormNormal_fnSetClearable, false);//
+
             int titleTextSize = a.getInteger(R.styleable.FormNormal_fnTitleTextSize, 17);
             int textSize = a.getInteger(R.styleable.FormNormal_fnTextSize, -1);
 
@@ -101,6 +103,10 @@ public class FormNormal extends LinearLayout {
             setGravity(fnGravityLeft);
 
             setImvLabelImageResource(resid);
+
+            if (fnSetClearable) {
+                setClearable();
+            }
         }
         setPadding2(left, top, right, bottom);
 

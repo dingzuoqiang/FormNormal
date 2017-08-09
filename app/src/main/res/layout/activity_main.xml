@@ -72,6 +72,15 @@
                 app:fnIndicatorVisible="false"
                 app:fnTitle="title" />
 
+            <com.dzq.widget.FormNormal
+                style="@style/FormNormalBaseStyle"
+                android:layout_marginTop="@dimen/padding_10"
+                android:background="@color/white"
+                app:fnEditable="true"
+                app:fnGravityLeft="true"
+                app:fnHint="hint"
+                app:fnSetClearable="true"
+                app:fnTitle="title" />
 
             <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
@@ -94,13 +103,13 @@
             <com.dzq.widget.FormNormal
                 style="@style/FormNormalBaseStyle"
                 android:layout_marginTop="@dimen/padding_10"
-                app:fnResId="@drawable/icon_myjk"
                 app:fnBottomPadding="30dp"
                 app:fnLeftPadding="30dp"
-                app:fnTopPadding="30dp"
+                app:fnResId="@drawable/icon_myjk"
                 app:fnRightPadding="30dp"
                 app:fnText="text"
-                app:fnTitle="title" />
+                app:fnTitle="title"
+                app:fnTopPadding="30dp" />
 
 
             <TextView
